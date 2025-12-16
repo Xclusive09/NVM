@@ -1,0 +1,24 @@
+{
+  "name": "NVM Wallet - Bulk Airtime & Data",
+  "short_name": "NVM Wallet",
+  "description": "Bulk airtime and data distribution platform for Nigeria",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "portrait",
+  "categories": ["finance", "utilities"],
+  "lang": "en"
+}
