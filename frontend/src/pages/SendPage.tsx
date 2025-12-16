@@ -321,7 +321,7 @@ export function SendPage() {
               onChange={(e) => setPhoneInput(e.target.value)}
               rows={5}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-              placeholder="Enter phone numbers separated by commas or new lines:&#10;08012345678&#10;08098765432&#10;..."
+              placeholder={`Enter phone numbers separated by commas or new lines:\n08012345678\n08098765432\n...`}
             />
             <p className="mt-1 text-xs text-gray-500">
               {phoneNumbers.length} phone number{phoneNumbers.length !== 1 ? 's' : ''} entered

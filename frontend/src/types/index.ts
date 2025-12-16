@@ -90,11 +90,11 @@ export interface RecipientTransaction {
 }
 
 export interface PaginatedResponse<T> {
+  data: T[];
   pagination: {
     total: number;
     page: number;
     limit: number;
     totalPages: number;
   };
-  [key: string]: T[] | typeof undefined | { total: number; page: number; limit: number; totalPages: number };
 }

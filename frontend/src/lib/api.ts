@@ -32,9 +32,13 @@ class ApiClient {
     const { method = 'GET', body, headers = {} } = options;
 
     const requestHeaders: Record<string, string> = {
-      'Content-Type': 'application/json',
       ...headers,
     };
+
+    // Only set Content-Type for JSON bodies, not FormData
+    if (body && !(body instanceof FormData)) {
+      requestHeaders['Content-Type'] = 'application/json';
+    }
 
     if (this.token) {
       requestHeaders['Authorization'] = `Bearer ${this.token}`;
@@ -46,7 +50,7 @@ class ApiClient {
     };
 
     if (body) {
-      config.body = JSON.stringify(body);
+      config.body = body instanceof FormData ? body : JSON.stringify(body);
     }
 
     const response = await fetch(`${this.baseUrl}${endpoint}`, config);
